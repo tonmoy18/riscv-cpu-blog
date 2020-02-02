@@ -1,5 +1,5 @@
 # Blog RISC-V CPU
-This is a repository of the resultant code after following the steps in the blog series *Designing a RISC-V Processor Core* which can be found at []().
+This is a repository of the resultant code after following the steps in the blog series [*Designing a RISC-V Processor Core*](https://tonmoy18.github.io/riscv-cpu-blog/).
 
 Please open an issue in this repository for any questions or concerns regarding the code hosted here or the content of the blog post itself.
 

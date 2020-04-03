@@ -72,9 +72,9 @@ int main(int argc, char** argv, char** env) {
     // top->data_in = 0x0f8a;
     top->rst_n = 0;
     top->eval();
-    top->clk = 0;
-    top->eval();
     top->clk = 1;
+    top->eval();
+    top->clk = 0;
     top->eval();
     top->rst_n = 1;
     top->eval();

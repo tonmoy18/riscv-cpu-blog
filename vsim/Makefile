@@ -56,7 +56,7 @@ HEX = hex/zeros.hex
 HEX2 = hex/zeros.hex
 
 # Input files for Verilator
-VERILATOR_INPUT = tb/top.sv -I../src -I./models -f input.vc sim_main.cpp
+VERILATOR_INPUT = tb/top.sv ../src/proc_pkg.sv -I../src -I./models -f input.vc sim_main.cpp
 
 ######################################################################
 default: run

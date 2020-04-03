@@ -46,8 +46,7 @@ module core(
   logic [31:0] x_arith_op1, x_arith_op2;
   logic [31:0] arith_out;
   logic x_funct7_30;
-
-  assign incr_pc = 1'b1;
+  logic conflict;
 
   pc u_pc (
     .rst_n_i        (rst_n_i),
@@ -63,6 +62,8 @@ module core(
     .clk_i          (clk_i),
     
     .pc_i           (pc_val),
+
+    .conflict_i     (conflict),
 
     .im_dout_i      (im_dout_i),
 
@@ -98,7 +99,10 @@ module core(
     .x_funct7_30_o          (x_funct7_30),
     .reg_w_addr_o           (reg_w_addr),
 
-    .w_funct3_o             (w_funct3)
+    .w_funct3_o             (w_funct3),
+
+    .incr_pc_o              (incr_pc),
+    .conflict_o             (conflict)
   );
 
   datapath u_datapath (
